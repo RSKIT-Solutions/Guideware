@@ -1,0 +1,423 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Test_VlookUp" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="934,2372" sap2010:WorkflowViewState.IdRef="Test_VlookUp_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Test_VlookUp" sap:VirtualizedContainerService.HintSize="572,2307" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="GWDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="cureIndexDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtFinal" />
+      <Variable x:TypeArguments="x:String" Name="dtFinalStr" />
+      <Variable x:TypeArguments="sd:DataRow[]" Name="arrayValues" />
+      <Variable x:TypeArguments="ui:Workbook" Name="compareDT" />
+      <Variable x:TypeArguments="x:String" Name="sourceValue" />
+      <Variable x:TypeArguments="x:Int32" Name="sourceIndex" />
+      <Variable x:TypeArguments="x:String" Name="batchDate" />
+      <Variable x:TypeArguments="x:String" Name="batchValue" />
+      <Variable x:TypeArguments="x:String" Name="outputNameValue" />
+      <Variable x:TypeArguments="x:Int32" Name="countOfsourceValues" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[GWDT]" DisplayName="Build Data Table -GWDT" sap:VirtualizedContainerService.HintSize="510,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Select&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Source&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Output_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Recipient&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Recipient_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Address&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Select&gt;unchecked&lt;/Select&gt;&#xD;&#xA;    &lt;Source&gt;PA0009418&lt;/Source&gt;&#xD;&#xA;    &lt;Output_x0020_Name&gt;Insured Endorsement Package&lt;/Output_x0020_Name&gt;&#xD;&#xA;    &lt;Recipient&gt;Insured&lt;/Recipient&gt;&#xD;&#xA;    &lt;Recipient_x0020_Name&gt;Tammie Nicholson&lt;/Recipient_x0020_Name&gt;&#xD;&#xA;    &lt;Address&gt;2222 Sturtevant St, Detroit, MI 48206-1241&lt;/Address&gt;&#xD;&#xA;    &lt;Status&gt;Printed&lt;/Status&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Select&gt;unchecked&lt;/Select&gt;&#xD;&#xA;    &lt;Source&gt;PA0013188&lt;/Source&gt;&#xD;&#xA;    &lt;Output_x0020_Name&gt;Testing Purpose&lt;/Output_x0020_Name&gt;&#xD;&#xA;    &lt;Recipient&gt;Insured&lt;/Recipient&gt;&#xD;&#xA;    &lt;Recipient_x0020_Name&gt;Roshell Perry&lt;/Recipient_x0020_Name&gt;&#xD;&#xA;    &lt;Address&gt;6180 Domine St Apt 206, Detroit, MI 48211-2035&lt;/Address&gt;&#xD;&#xA;    &lt;Status&gt;Printed&lt;/Status&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Select&gt;unchecked&lt;/Select&gt;&#xD;&#xA;    &lt;Source&gt;PAMI158820&lt;/Source&gt;&#xD;&#xA;    &lt;Output_x0020_Name&gt;Insured New Business Package&lt;/Output_x0020_Name&gt;&#xD;&#xA;    &lt;Recipient&gt;Insured &lt;/Recipient&gt;&#xD;&#xA;    &lt;Recipient_x0020_Name&gt;Jeffrey Bryant&lt;/Recipient_x0020_Name&gt;&#xD;&#xA;    &lt;Address&gt;14 University Place Dr, Pontiac, MI 48342-1880&lt;/Address&gt;&#xD;&#xA;    &lt;Status&gt;Printed&lt;/Status&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Select&gt;unchecked&lt;/Select&gt;&#xD;&#xA;    &lt;Source&gt;PA0013188&lt;/Source&gt;&#xD;&#xA;    &lt;Output_x0020_Name&gt;Insured Renewal Declaration&lt;/Output_x0020_Name&gt;&#xD;&#xA;    &lt;Recipient&gt;Insured&lt;/Recipient&gt;&#xD;&#xA;    &lt;Recipient_x0020_Name&gt;VenkatSuresh&lt;/Recipient_x0020_Name&gt;&#xD;&#xA;    &lt;Address&gt;India&lt;/Address&gt;&#xD;&#xA;    &lt;Status&gt;Printed&lt;/Status&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Select&gt;unchecked&lt;/Select&gt;&#xD;&#xA;    &lt;Source&gt;PA0013188&lt;/Source&gt;&#xD;&#xA;    &lt;Output_x0020_Name&gt;Testing Purpose&lt;/Output_x0020_Name&gt;&#xD;&#xA;    &lt;Recipient&gt;Insured&lt;/Recipient&gt;&#xD;&#xA;    &lt;Recipient_x0020_Name&gt;Krishna&lt;/Recipient_x0020_Name&gt;&#xD;&#xA;    &lt;Address&gt;Bharat&lt;/Address&gt;&#xD;&#xA;    &lt;Status&gt;Printed&lt;/Status&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:BuildDataTable DataTable="[cureIndexDT]" DisplayName="Build Data Table - cureIndexDT" sap:VirtualizedContainerService.HintSize="510,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;AccountNumber&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Address_x0020_1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Address_x0020_2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Address_x0020_3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Address_x0020_4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Address_x0020_5&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Address_x0020_6&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SplitCode&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;StatementDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DatafileName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DateCreated&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;AccountNumber&gt;PA0009418&lt;/AccountNumber&gt;&#xA;    &lt;Address_x0020_1&gt;Tammie Nicholson&lt;/Address_x0020_1&gt;&#xA;    &lt;Address_x0020_2&gt;2222 STURTEVANT ST&lt;/Address_x0020_2&gt;&#xA;    &lt;Address_x0020_3&gt;DETROIT MI 48206-1241&lt;/Address_x0020_3&gt;&#xA;    &lt;SplitCode&gt;LotF&lt;/SplitCode&gt;&#xA;    &lt;StatementDate&gt;1/11/2024 12:00:00 AM -05:00&lt;/StatementDate&gt;&#xA;    &lt;DatafileName&gt;CureMichigan-MULTIS-01112024105136.data&lt;/DatafileName&gt;&#xA;    &lt;DateCreated&gt;1/11/2024 10:53:56 AM -05:00&lt;/DateCreated&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;AccountNumber&gt;PA0013188&lt;/AccountNumber&gt;&#xA;    &lt;Address_x0020_1&gt;Roshell Perry&lt;/Address_x0020_1&gt;&#xA;    &lt;Address_x0020_2&gt;6180 DOMINE ST APT 206&lt;/Address_x0020_2&gt;&#xA;    &lt;Address_x0020_3&gt;DETROIT MI 48211-2035&lt;/Address_x0020_3&gt;&#xA;    &lt;SplitCode&gt;LotF&lt;/SplitCode&gt;&#xA;    &lt;StatementDate&gt;1/11/2024 12:00:00 AM -05:00&lt;/StatementDate&gt;&#xA;    &lt;DatafileName&gt;CureMichigan-MULTIS-01112024105136.data&lt;/DatafileName&gt;&#xA;    &lt;DateCreated&gt;1/11/2024 10:53:56 AM -05:00&lt;/DateCreated&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataRow[]">[arrayValues]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataRow[]">[GWDT.AsEnumerable.Where(Function(r) r(2).ToString.ToLower.Contains("testing purpose")).ToArray]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[arrayValues.Count.ToString]" />
+    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[outputNameValue]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["testing purpose"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="510,1143" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrayValues]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentItem" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,957" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[sourceValue]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem(1).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Source value - &quot;+sourceValue]" />
+            <Assign DisplayName="Assign - SourceIndex" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_12">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[countOfsourceValues]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[GWDT.Asenumerable.Count(Function(r) r("Source").Tostring.Equals(sourceValue) AndAlso r("Output Name").toString.tolower.equals(outputNameValue))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Count of Source Values &quot;+countOfsourceValues.ToString]" />
+            <Assign DisplayName="Assign - SourceIndex" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[sourceIndex]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[GWDT.Asenumerable.Tolist.Findindex(Function(r) r("Source").Tostring.Equals(sourceValue) AndAlso r("Output Name").toString.tolower.equals(outputNameValue))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Source Index -- &quot;+sourceIndex.ToString]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,1041" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="sd:DataRow[]">[arrayValues]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="sd:DataRow[]">[GWDT.AsEnumerable.Where(Function(r) r(2).ToString.ToLower.Contains("Insured Renewal Declaration") ).ToArray]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="sd:DataTable">[dtFinal]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="sd:DataTable">[GWDT.AsEnumerable.Where(Function(r) not cureIndexDT.AsEnumerable.Any(Function(r2) r2("AccountNumber").ToString=r("Source").ToString)).CopyToDataTable.DefaultView.ToTable(False,{"Source","Output Name"})]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:OutputDataTable DataTable="[dtFinal]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[dtFinalStr]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[dtFinalStr]" />
+          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[sourceValue]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">PAMI158820</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Assign - SourceIndex" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[sourceIndex]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">[GWDT.Asenumerable.Tolist.Findindex(Function(r) r("Source").Tostring.Equals(sourceValue))]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[sourceIndex.ToString]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Assign DisplayName="Assign -batchDate" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[batchDate]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[(date.Today.AddDays(-7)).ToShortDateString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[batchValue]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[batchDate+"*"+"MorethanOnePage"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Guidewire InsuranceNow™" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="bde57a33-1f44-4ebe-8605-de7ad15ae99d" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548,873" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="row" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NSelectItem DisplayName="Select Item 'Batch*'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="01/16/2024 08:30:48 EST OnePage" ScopeIdentifier="bde57a33-1f44-4ebe-8605-de7ad15ae99d" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="41">
+                  <x:String>Current</x:String>
+                  <x:String>01/16/2024 08:48:30 EST MorethanOnePage</x:String>
+                  <x:String>01/16/2024 08:30:48 EST OnePage</x:String>
+                  <x:String>01/15/2024 09:31:02 EST MorethanOnePage</x:String>
+                  <x:String>01/15/2024 08:41:27 EST OnePage</x:String>
+                  <x:String>01/12/2024 08:37:07 EST MorethanOnePage</x:String>
+                  <x:String>01/12/2024 08:22:10 EST OnePage</x:String>
+                  <x:String>01/11/2024 08:42:58 EST OnePage</x:String>
+                  <x:String>01/11/2024 08:39:35 EST MorethanOnePage</x:String>
+                  <x:String>01/10/2024 07:59:04 EST OnePage</x:String>
+                  <x:String>01/10/2024 07:53:56 EST MorethanOnePage</x:String>
+                  <x:String>01/09/2024 09:07:42 EST OnePage</x:String>
+                  <x:String>01/09/2024 08:44:36 EST MorethanOnePage</x:String>
+                  <x:String>01/08/2024 09:55:25 EST MorethanOnePage</x:String>
+                  <x:String>01/08/2024 08:39:55 EST OnePage</x:String>
+                  <x:String>01/05/2024 08:07:38 EST MorethanOnePage</x:String>
+                  <x:String>01/05/2024 07:50:51 EST OnePage</x:String>
+                  <x:String>01/04/2024 08:38:59 EST MorethanOnePage</x:String>
+                  <x:String>01/04/2024 08:22:21 EST OnePage</x:String>
+                  <x:String>01/03/2024 08:46:49 EST MorethanOnePage</x:String>
+                  <x:String>01/03/2024 08:31:41 EST OnePage</x:String>
+                  <x:String>01/02/2024 10:04:52 EST MorethanOnePage</x:String>
+                  <x:String>01/02/2024 09:03:47 EST OnePage</x:String>
+                  <x:String>12/29/2023 08:12:19 EST MorethanOnePage</x:String>
+                  <x:String>12/29/2023 07:41:22 EST OnePage</x:String>
+                  <x:String>12/28/2023 08:54:12 EST MorethanOnePage</x:String>
+                  <x:String>12/28/2023 08:19:42 EST OnePage</x:String>
+                  <x:String>12/27/2023 08:56:45 EST MorethanOnePage</x:String>
+                  <x:String>12/27/2023 08:35:34 EST OnePage</x:String>
+                  <x:String>12/26/2023 11:41:36 EST OnePage</x:String>
+                  <x:String>12/26/2023 11:31:01 EST MorethanOnePage</x:String>
+                  <x:String>12/22/2023 08:05:39 EST MorethanOnePage</x:String>
+                  <x:String>12/22/2023 07:46:19 EST OnePage</x:String>
+                  <x:String>12/21/2023 08:57:14 EST MorethanOnePage</x:String>
+                  <x:String>12/21/2023 08:43:49 EST OnePage</x:String>
+                  <x:String>12/20/2023 10:03:36 EST MorethanOnePage</x:String>
+                  <x:String>12/20/2023 09:14:21 EST OnePage</x:String>
+                  <x:String>12/19/2023 09:15:10 EST MorethanOnePage</x:String>
+                  <x:String>12/19/2023 08:42:15 EST OnePage</x:String>
+                  <x:String>12/18/2023 09:21:58 EST MorethanOnePage</x:String>
+                  <x:String>12/18/2023 08:48:21 EST OnePage</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvTextArea="406, 273, 39, 11" CvTextArgument="Current" CvType="Text" DesignTimeRectangle="400, 268, 250, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Current'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' type='' tag='SELECT' class='' aaname='Batch*' /&gt;" Guid="2f787dc8-9856-4ff2-8359-4c84ca968333" InformativeScreenshot="76c5adc0bc59a57b4970cfa4c2a5818b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArea="341, 273, 39, 12" CvTextArgument="Batch*" CvType="Text" DesignTimeRectangle="342, 271, 42, 17" ElementType="Text" FriendlyName="'Batch*'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Batch*' check:innerText='Batch*' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <Assign sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[row]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">75</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,347" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'NC10254786'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bde57a33-1f44-4ebe-8605-de7ad15ae99d" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="343, 566, 20, 20" CvType="CheckBox" DesignTimeRectangle="349, 570, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='INPUT' idx='2' /&gt;&quot;, row)]" FuzzySelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl id='Select_1058283' type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="7bfa0a57-4c57-4e2e-ba00-244c349d1e3b" InformativeScreenshot="ade0c0e2297d897eaefe3fb1a5420435.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,859" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'NC10254786'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bde57a33-1f44-4ebe-8605-de7ad15ae99d" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="343, 566, 20, 20" CvType="CheckBox" DesignTimeRectangle="349, 570, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl tableRow='80' tag='INPUT' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl id='Select_1058283' type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="7bfa0a57-4c57-4e2e-ba00-244c349d1e3b" InformativeScreenshot="ade0c0e2297d897eaefe3fb1a5420435.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'NC10254786'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bde57a33-1f44-4ebe-8605-de7ad15ae99d" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="343, 566, 20, 20" CvType="CheckBox" DesignTimeRectangle="349, 570, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl tableRow='85' tag='INPUT' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl id='Select_1058283' type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="7bfa0a57-4c57-4e2e-ba00-244c349d1e3b" InformativeScreenshot="ade0c0e2297d897eaefe3fb1a5420435.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'NC10254786'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bde57a33-1f44-4ebe-8605-de7ad15ae99d" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="343, 566, 20, 20" CvType="CheckBox" DesignTimeRectangle="349, 570, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl tableRow='90' tag='INPUT' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl id='Select_1058283' type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="7bfa0a57-4c57-4e2e-ba00-244c349d1e3b" InformativeScreenshot="ade0c0e2297d897eaefe3fb1a5420435.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'PAPA051926'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bde57a33-1f44-4ebe-8605-de7ad15ae99d" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="343, 545, 19, 19" CvType="CheckBox" DesignTimeRectangle="343, 545, 19, 19" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'PAPA051926'" Guid="9b9589a5-552f-4535-b5d2-4eb6466525fe" InformativeScreenshot="8e9fc3299dfd77b12e40b63caec7b163.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="381, 549, 62, 12" CvTextArgument="PAPA051926" CvType="Text" DesignTimeRectangle="381, 549, 62, 12" ElementType="Text" FriendlyName="'PAPA051926'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="41055480c47169816fb3e2ec7ccb0172.jpg" Selector="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" Title="Guidewire InsuranceNow™" Url="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

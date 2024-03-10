@@ -1,0 +1,42 @@
+Serviceaccount - uploadfilestogdrive@buoyant-nectar-270309.iam.gserviceaccount.com
+Key --04088080e70e1e396f71af47d411f05d129df09d
+Pwd : notasecret
+
+
+SetUp Google Workspace for Uipath Automation:
+
+Google workspace applications include : google calender, google drive, google sheet Gmail,Google Docs  etc
+
+Set Up Application in google Cloud :
+
+1. Enable APIS : this step enables automation by granting API access to your G suite applications
+2. Create Credentials : this specifies the authentication type used to interact with your enables APIs.
+
+Log into -console.clould.google.com and create Project(GsuiteUipath)
+goto APIs Overview and click on Enable APIs & services and enable the required APIS
+
+Step 2 : we have to create credentials -
+
+To create credentials we have 3 Methods :
+1. API Keys
+2. OAuth 2.0 Client IDs
+3. Service Account
+
+In this method we are going to See with  OAuth 2.0 Client IDs
+
+
+OAuth 2.0 Client IDs Information
+Client ID - 953141228671-rfa9d9c9a5g7m2duqh78s4csudh2t9iv.apps.googleusercontent.com
+Client secret - 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
+
+App password to send Gmails : ckrildehelscsdhx
+
+02162024085503est_morethanonepage
+
+18002095511 - GodreJ customer care
+
+
+
+
+
+  

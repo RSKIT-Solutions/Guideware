@@ -1,0 +1,10 @@
+ Hi Team,<br>
+ Pleaser find ~todaysdate~ summary report<br><br>
+ <b>~Dixiom file~ - Doxim file Uploaded to the Gdrive</b><br>
+ <b>Count of MoreThanOnepage files ~MoreThanOnePageFilesCount~. Not available in Doxim report :       ~CountOfMoreThanOnePage~</b> <br>
+ ~MoreThanOnepage files~
+ <b>Count Of Onepage files ~OnePageFilesCount~. Not available in Doxim report :~CountOfOnePage~ </b> <br>
+ ~Onepage files~
+ <b> Files uploaded to Reprint folder : ~CountOfReprintFolder~</b> <br>
+ <b>Duplicate files list : ~Duplicate files~ </b><Br>
+ 

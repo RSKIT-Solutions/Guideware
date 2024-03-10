@@ -1,0 +1,1341 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>948,15130</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Sheets.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="958,15065" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="URL" />
+      <Variable x:TypeArguments="x:String" Name="UserName" />
+      <Variable x:TypeArguments="x:String" Name="Password" />
+      <Variable x:TypeArguments="x:String" Name="attributeValue" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="payableElements" />
+      <Variable x:TypeArguments="x:String" Name="lockAccountStatus" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DixiomDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="uniqueDixiomDT" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="operationsChidren" />
+      <Variable x:TypeArguments="sd:DataTable" Name="uniqueMoreThanOnePageDT" />
+      <Variable x:TypeArguments="x:Int32" Name="rowsInMorethanOnePage" />
+      <Variable x:TypeArguments="x:String" Name="columnNamesStr" />
+      <Variable x:TypeArguments="s:String[]" Name="columnNamesArr" />
+      <Variable x:TypeArguments="sd:DataTable" Name="onePageDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="moreThanOnePageDT" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="compareMoreThanOnePageDT" />
+      <Variable x:TypeArguments="sd:DataRow[]" Name="insuredCancellationRows" />
+      <Variable x:TypeArguments="x:Int32" Name="sourceIndex" />
+      <Variable x:TypeArguments="x:String" Name="sourceValue" />
+      <Variable x:TypeArguments="x:String" Name="csvFilepath" />
+      <Variable x:TypeArguments="x:String" Name="final" />
+      <Variable x:TypeArguments="x:String" Name="dixiom_GW" />
+      <Variable x:TypeArguments="x:String" Name="batchDate" />
+      <Variable x:TypeArguments="x:String" Name="batchMoreThanOnePage" />
+      <Variable x:TypeArguments="x:String" Name="batchOnePage" />
+      <Variable x:TypeArguments="x:Int32" Name="countOfsourceValues" />
+      <Variable x:TypeArguments="x:String" Name="outputNameValue" />
+      <Variable x:TypeArguments="sd:DataTable" Name="uniqueOnePageDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="comparedOnePageDT" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="896,52" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[URL]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">["https://cure-prod.xi-1-us-west-2.guidewire.net/innovation"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[UserName]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">skumar</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[Password]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Access0000!</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[csvFilepath]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">["CURE-Index-01162024.csv"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[dixiom_GW]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">["Dixiom_GW_"+Now.ToShortDateString+".xlsx"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[batchDate]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[(date.Today.AddDays(-3)).ToShortDateString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[batchMoreThanOnePage]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[batchDate+"*"+"MorethanOnePage"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[batchOnePage]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[batchDate+"*"+"OnePage"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[outputNameValue]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">["insured cancellation notice"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="896,75" sap2010:WorkflowViewState.IdRef="Comment_1" Text="read CSV file and store information into Dixiom datatable" />
+    <ui:ReadCsvFile DataTable="[DixiomDT]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[csvFilepath]" sap:VirtualizedContainerService.HintSize="896,154" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="896,94" sap2010:WorkflowViewState.IdRef="Comment_2" Text="Remove duplicates from Dixiom Datatable and get only account numbers into another DT uniqueDixiomDT" />
+    <Assign DisplayName="Assign -uniqueDixiomDT" sap:VirtualizedContainerService.HintSize="896,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[uniqueDixiomDT]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[DixiomDT.DefaultView.ToTable(true, "AccountNumber")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[uniqueDixiomDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="896,116" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="uniqueDixiom" WorkbookPath="[dixiom_GW]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="896,75" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Login to GUIDEwire and scrape the More than one page and onePage data  " />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Guidewire InsuranceNow™ Login" sap:VirtualizedContainerService.HintSize="896,14026" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="862,13809" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="800,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Text="[UserName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cure-model2.nu-1-us-west-2.guidewire.net/login.jsp?rndtk=140194241" CvElementArea="651, 268, 202, 24" CvType="InputBox" DesignTimeRectangle="652, 269, 200, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'skumar'" FullSelectorArgument="&lt;webctrl id='j_username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='j_username' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="cce09309-3448-483a-bb52-26ee70511969" InformativeScreenshot="086a74fc4b74392069dd5f027a4a11aa.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™ Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="569, 274, 68, 12" CvTextArgument="User Name" CvType="Text" DesignTimeRectangle="492, 269, 150, 25" ElementType="Text" FriendlyName="'User Name'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='User Name' check:innerText='User Name' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="800,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Text="[Password]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cure-model2.nu-1-us-west-2.guidewire.net/login.jsp?rndtk=140194241" CvElementArea="649, 300, 204, 25" CvType="InputBox" DesignTimeRectangle="652, 301, 200, 22" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT j_password'" FullSelectorArgument="&lt;webctrl id='j_password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='j_password' tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="320fd908-2c9c-40a4-872d-2911d27733bd" InformativeScreenshot="44d86d4a4db9504f59accbed4b934254.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™ Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="578, 305, 60, 13" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="492, 301, 150, 25" ElementType="Text" FriendlyName="'Password'" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='' check:innerText='Password' /&gt;" SearchSteps="FuzzySelector, CV">
+                        <uix:Target.FullSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">&lt;webctrl aaname='Password' tag='LABEL' /&gt;</Literal>
+                          </InArgument>
+                        </uix:Target.FullSelectorArgument>
+                      </uix:Target>
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign In'" sap:VirtualizedContainerService.HintSize="800,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cure-model2.nu-1-us-west-2.guidewire.net/login.jsp?rndtk=140194241" CvElementArea="797, 332, 54, 27" CvTextArea="806, 340, 39, 14" CvTextArgument="Sign In" CvType="Button" DesignTimeRectangle="799, 333, 52, 25" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl id='SignIn' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='SignIn' tag='A' type='' class='button button-primary' aaname=' Sign In' check:innerText='Sign In' /&gt;" Guid="d6a5b580-b048-4d7f-b674-3603b0635717" InformativeScreenshot="1946f2523797dd25ed03e1706902043d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™ Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="800,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Operations" sap:VirtualizedContainerService.HintSize="800,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvTextArea="947, 159, 64, 16" CvTextArgument="Operations" CvType="Text" DesignTimeRectangle="936, 147, 86, 38" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'OperationsBatch Printin…'" FullSelectorArgument="&lt;webctrl id='Menu_Operations' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Menu_Operations' tag='LI' type='' class='nav-item has-sub-nav active' aaname='Operations' check:innerText='Operations' /&gt;" Guid="cbc97364-c3a4-45c2-872a-150c8fe45fa7" InformativeScreenshot="4e34998803e7611321124512b1ca1e3d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:FindChildren Children="[operationsChidren]" DisplayName="Find Children 'LI  Menu_Operations'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="800,107" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+              <ui:FindChildren.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="36327d08-228d-46cf-a8ae-09a1557585a2" InformativeScreenshot="c9904b37cc5bb7ad51492523da400c01" Selector="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;&lt;webctrl id='Menu_Operations' tag='LI' aaname='Operations' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:FindChildren.Target>
+            </ui:FindChildren>
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each - Operations" sap:VirtualizedContainerService.HintSize="800,12507" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[operationsChidren]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="ui:UiElement">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="766,12321" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="724,187" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" InUiElement="[currentItem]" Result="[attributeValue]" Version="V3" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="724,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[attributeValue]" />
+                    <If Condition="[attributeValue=&quot;Batch Printing&quot;]" sap:VirtualizedContainerService.HintSize="724,11823" sap2010:WorkflowViewState.IdRef="If_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="690,11528" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="648,137" sap2010:WorkflowViewState.IdRef="NClick_9" InUiElement="[currentItem]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="648,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OperationsBatch Printin…'" sap:VirtualizedContainerService.HintSize="648,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="935, 94, 87, 38" CvTextArea="947, 107, 64, 16" CvTextArgument="Operations" CvType="Button" DesignTimeRectangle="936, 95, 86, 38" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'OperationsBatch Printin…'" FullSelectorArgument="&lt;webctrl id='Menu_Operations' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Menu_Operations' tag='LI' type='' class='nav-item has-sub-nav active' aaname='Batch*' check:innerText='Operations' /&gt;" Guid="ba676e9e-dbe0-4cdf-a961-e66317de8430" InformativeScreenshot="d20e40feb54288fdf2662b939ab13ff6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Sequence DisplayName="Operation_MoreThanOnePage " sap:VirtualizedContainerService.HintSize="648,5230" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NSelectItem DisplayName="Select Item 'Batch*'" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[batchMoreThanOnePage]" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                              <uix:NSelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="39">
+                                  <x:String>Current</x:String>
+                                  <x:String>01/12/2024 08:37:07 EST MorethanOnePage</x:String>
+                                  <x:String>01/12/2024 08:22:10 EST OnePage</x:String>
+                                  <x:String>01/11/2024 08:42:58 EST OnePage</x:String>
+                                  <x:String>01/11/2024 08:39:35 EST MorethanOnePage</x:String>
+                                  <x:String>01/10/2024 07:59:04 EST OnePage</x:String>
+                                  <x:String>01/10/2024 07:53:56 EST MorethanOnePage</x:String>
+                                  <x:String>01/09/2024 09:07:42 EST OnePage</x:String>
+                                  <x:String>01/09/2024 08:44:36 EST MorethanOnePage</x:String>
+                                  <x:String>01/08/2024 09:55:25 EST MorethanOnePage</x:String>
+                                  <x:String>01/08/2024 08:39:55 EST OnePage</x:String>
+                                  <x:String>01/05/2024 08:07:38 EST MorethanOnePage</x:String>
+                                  <x:String>01/05/2024 07:50:51 EST OnePage</x:String>
+                                  <x:String>01/04/2024 08:38:59 EST MorethanOnePage</x:String>
+                                  <x:String>01/04/2024 08:22:21 EST OnePage</x:String>
+                                  <x:String>01/03/2024 08:46:49 EST MorethanOnePage</x:String>
+                                  <x:String>01/03/2024 08:31:41 EST OnePage</x:String>
+                                  <x:String>01/02/2024 10:04:52 EST MorethanOnePage</x:String>
+                                  <x:String>01/02/2024 09:03:47 EST OnePage</x:String>
+                                  <x:String>12/29/2023 08:12:19 EST MorethanOnePage</x:String>
+                                  <x:String>12/29/2023 07:41:22 EST OnePage</x:String>
+                                  <x:String>12/28/2023 08:54:12 EST MorethanOnePage</x:String>
+                                  <x:String>12/28/2023 08:19:42 EST OnePage</x:String>
+                                  <x:String>12/27/2023 08:56:45 EST MorethanOnePage</x:String>
+                                  <x:String>12/27/2023 08:35:34 EST OnePage</x:String>
+                                  <x:String>12/26/2023 11:41:36 EST OnePage</x:String>
+                                  <x:String>12/26/2023 11:31:01 EST MorethanOnePage</x:String>
+                                  <x:String>12/22/2023 08:05:39 EST MorethanOnePage</x:String>
+                                  <x:String>12/22/2023 07:46:19 EST OnePage</x:String>
+                                  <x:String>12/21/2023 08:57:14 EST MorethanOnePage</x:String>
+                                  <x:String>12/21/2023 08:43:49 EST OnePage</x:String>
+                                  <x:String>12/20/2023 10:03:36 EST MorethanOnePage</x:String>
+                                  <x:String>12/20/2023 09:14:21 EST OnePage</x:String>
+                                  <x:String>12/19/2023 09:15:10 EST MorethanOnePage</x:String>
+                                  <x:String>12/19/2023 08:42:15 EST OnePage</x:String>
+                                  <x:String>12/18/2023 09:21:58 EST MorethanOnePage</x:String>
+                                  <x:String>12/18/2023 08:48:21 EST OnePage</x:String>
+                                  <x:String>12/15/2023 07:56:47 EST MorethanOnePage</x:String>
+                                  <x:String>12/15/2023 07:42:09 EST OnePage</x:String>
+                                </scg:List>
+                              </uix:NSelectItem.Items>
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvTextArea="406, 221, 39, 11" CvTextArgument="Current" CvType="Text" DesignTimeRectangle="400, 216, 250, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Current'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' type='' tag='SELECT' class='' aaname='Batch*' /&gt;" Guid="9db925ef-bf62-4ec1-a05e-37a5bc48182d" InformativeScreenshot="d87cbf6c58d09d4b1163099173e0696b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CvTextArea="341, 221, 39, 12" CvTextArgument="Batch*" CvType="Text" DesignTimeRectangle="342, 219, 42, 17" ElementType="Text" FriendlyName="'Batch*'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Batch*' check:innerText='Batch*' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NSelectItem>
+                            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="586,90" sap2010:WorkflowViewState.IdRef="Delay_8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Delay>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Load'" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="1125, 240, 41, 27" CvTextArea="1133, 249, 25, 11" CvTextArgument="Load" CvType="Button" DesignTimeRectangle="1127, 242, 38, 25" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Load'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='Load' tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='Load' type='' tag='A' class='button button-secondary' aaname='Load' check:innerText='Load' /&gt;" Guid="f432ed24-4689-4d11-82dd-c535bb338ff3" InformativeScreenshot="c93538e29977d992a011c7bf4671d313.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="586,90" sap2010:WorkflowViewState.IdRef="Delay_4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Delay>
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,75" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Scraping the morethan one page data and storing  it into the moreThanOnePageDT" />
+                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[moreThanOnePageDT]" DisplayName="moreThanOnePageDT" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Select' ReferenceName='Select' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Source' ReferenceName='Source' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Output Name' ReferenceName='Output Name' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Recipient' ReferenceName='Recipient' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Recipient Name' ReferenceName='Recipient Name' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Address' ReferenceName='Address' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Status' ReferenceName='Status' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-7' ReferenceName='Column-7' ReferenceIdx='7'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-8' ReferenceName='Column-8' ReferenceIdx='8'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-9' ReferenceName='Column-9' ReferenceIdx='9'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-10' ReferenceName='Column-10' ReferenceIdx='10'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-11' ReferenceName='Column-11' ReferenceIdx='11'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Select' attr='fulltext' /&gt;&lt;column name='Source' attr='fulltext' /&gt;&lt;column name='Output Name' attr='fulltext' /&gt;&lt;column name='Recipient' attr='fulltext' /&gt;&lt;column name='Recipient Name' attr='fulltext' /&gt;&lt;column name='Address' attr='fulltext' /&gt;&lt;column name='Status' attr='fulltext' /&gt;&lt;column name='Column-7' attr='fulltext' /&gt;&lt;column name='Column-8' attr='fulltext' /&gt;&lt;column name='Column-9' attr='fulltext' /&gt;&lt;column name='Column-10' attr='fulltext' /&gt;&lt;column name='Column-11' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                              <uix:NExtractData.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="329, 175, 973, 14030" DesignTimeScaleFactor="1" FriendlyName="'Select Source'" FullSelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;" Guid="cc282303-4442-47f8-9825-f21d3ec08ee8" InformativeScreenshot="aefe7bd17c77cc996e128630934419a9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                              </uix:NExtractData.Target>
+                            </uix:NExtractData>
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,75" sap2010:WorkflowViewState.IdRef="Comment_5" Text="get the column names of the moreThanOnePage" />
+                            <Assign DisplayName="Assign - ColumnName" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="s:String[]">[columnNamesArr]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="s:String[]">[(from name in moreThanOnePageDT.Columns.Cast(of system.data.dataColumn) Select name.ColumnName).ToArray()]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[columnNamesStr]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[string.Join(",",columnNamesArr)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:LogMessage DisplayName="Log Message - ColumnNames" sap:VirtualizedContainerService.HintSize="586,143" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Column Names - &quot;+columnNamesStr.ToString]" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,132" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Remove extra columns from the moreThaonepageDT and keep only specified columns in the DT - &#xA;                  Select,Source,Output Name,Recipient,Recipient Name,Address,Status" />
+                            <Assign DisplayName="Assign - moreThanOnePageDT" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[moreThanOnePageDT]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[moreThanOnePageDT.DefaultView.ToTable(False,"Select","Source","Output Name","Recipient","Recipient Name","Address","Status")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[moreThanOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="586,116" sap2010:WorkflowViewState.IdRef="WriteRange_15" SheetName="MoreThanOnePage" WorkbookPath="[dixiom_GW]" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,113" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Remove duplicates from moreThanOnePageDT Datatable and get only source and Output Name  into another DT uniquemoreThanOnePageDT" />
+                            <Assign DisplayName="Assign - uniqueMoreThanOnePageDT" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[uniqueMoreThanOnePageDT]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[moreThanOnePageDT.DefaultView.ToTable(true, "Source","Output Name")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[uniqueMoreThanOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="586,116" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="uniqueMoreThanOnePage" WorkbookPath="[dixiom_GW]" />
+                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="586,90" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,151" sap2010:WorkflowViewState.IdRef="Comment_8" Text="Below linq query compares source in 'uniquemoreThanOnePageDT'  with  'Account numbers' in uniqueDixiomDT  - if the source value is not present , then source and its respective 'Output Name ' stores in another DT compareDT" />
+                            <Assign DisplayName="Assign - comparedDT" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_9">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[compareMoreThanOnePageDT]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[uniqueMoreThanOnePageDT.AsEnumerable.Where(Function(r) not uniqueDixiomDT.AsEnumerable.Any(Function(r2) r2("AccountNumber").ToString=r("Source").ToString)).CopyToDataTable.DefaultView.ToTable(False,{"Source","Output Name"})]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[compareMoreThanOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="586,116" sap2010:WorkflowViewState.IdRef="WriteRange_9" SheetName="Compare_MoreThanOnePage" WorkbookPath="[dixiom_GW]" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,75" sap2010:WorkflowViewState.IdRef="Comment_14" Text="getting list of output name  as 'Insured Cancellation Notice' only" />
+                            <Assign DisplayName="Assign - insuredCancellationRows" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataRow[]">[insuredCancellationRows]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataRow[]">[compareMoreThanOnePageDT.AsEnumerable.Where(Function(r) r(1).ToString.ToLower.Contains(outputNameValue) ).ToArray]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="586,1894" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[insuredCancellationRows]">
+                              <ui:ForEach.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentItem" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1708" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[sourceValue]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[currentItem(0).ToString]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,143" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Source Values  in More Than One page - &quot;+currentItem(0).ToString]" />
+                                    <ui:Comment sap:VirtualizedContainerService.HintSize="510,75" sap2010:WorkflowViewState.IdRef="Comment_16" Text="get the count of rows where source values where output name matches with other rows " />
+                                    <Assign DisplayName="Assign - SourceIndex" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[countOfsourceValues]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[moreThanOnePageDT.Asenumerable.Count(Function(r) r("Source").Tostring.Equals(sourceValue) AndAlso r("Output Name").toString.tolower.equals(outputNameValue))]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <If Condition="[countOfsourceValues=1]" DisplayName="If -countOfsourceValues &gt;1 " sap:VirtualizedContainerService.HintSize="510,1078" sap2010:WorkflowViewState.IdRef="If_4">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="476,665" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:Comment sap:VirtualizedContainerService.HintSize="434,75" sap2010:WorkflowViewState.IdRef="Comment_15" Text="get the source value  Index from  the 'moreThanOnePageDT'" />
+                                          <Assign DisplayName="Assign - SourceIndex" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">[sourceIndex]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">[moreThanOnePageDT.Asenumerable.Tolist.Findindex(Function(r) r("Source").Tostring.Equals(sourceValue))]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Source Index in More Than one Page -- &quot;+sourceIndex.ToString]" />
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  -'Source'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="343, 566, 20, 20" CvType="CheckBox" DesignTimeRectangle="349, 570, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='INPUT' idx='2' /&gt;&quot;, sourceIndex)]" FuzzySelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl id='Select_1058283' type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="7bfa0a57-4c57-4e2e-ba00-244c349d1e3b" InformativeScreenshot="ade0c0e2297d897eaefe3fb1a5420435.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;In more than one page source value - &quot;+sourceValue +&quot;has more than one matches and no.of matches are &quot;+countOfsourceValues.ToString]" />
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEach.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ForEach>
+                          </Sequence>
+                          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="648,90" sap2010:WorkflowViewState.IdRef="Delay_15" />
+                          <Sequence DisplayName="Operation_OnePage " sap:VirtualizedContainerService.HintSize="648,5303" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NSelectItem DisplayName="Select Item 'Batch*'" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="[batchOnePage]" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                              <uix:NSelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="39">
+                                  <x:String>Current</x:String>
+                                  <x:String>01/12/2024 08:37:07 EST MorethanOnePage</x:String>
+                                  <x:String>01/12/2024 08:22:10 EST OnePage</x:String>
+                                  <x:String>01/11/2024 08:42:58 EST OnePage</x:String>
+                                  <x:String>01/11/2024 08:39:35 EST MorethanOnePage</x:String>
+                                  <x:String>01/10/2024 07:59:04 EST OnePage</x:String>
+                                  <x:String>01/10/2024 07:53:56 EST MorethanOnePage</x:String>
+                                  <x:String>01/09/2024 09:07:42 EST OnePage</x:String>
+                                  <x:String>01/09/2024 08:44:36 EST MorethanOnePage</x:String>
+                                  <x:String>01/08/2024 09:55:25 EST MorethanOnePage</x:String>
+                                  <x:String>01/08/2024 08:39:55 EST OnePage</x:String>
+                                  <x:String>01/05/2024 08:07:38 EST MorethanOnePage</x:String>
+                                  <x:String>01/05/2024 07:50:51 EST OnePage</x:String>
+                                  <x:String>01/04/2024 08:38:59 EST MorethanOnePage</x:String>
+                                  <x:String>01/04/2024 08:22:21 EST OnePage</x:String>
+                                  <x:String>01/03/2024 08:46:49 EST MorethanOnePage</x:String>
+                                  <x:String>01/03/2024 08:31:41 EST OnePage</x:String>
+                                  <x:String>01/02/2024 10:04:52 EST MorethanOnePage</x:String>
+                                  <x:String>01/02/2024 09:03:47 EST OnePage</x:String>
+                                  <x:String>12/29/2023 08:12:19 EST MorethanOnePage</x:String>
+                                  <x:String>12/29/2023 07:41:22 EST OnePage</x:String>
+                                  <x:String>12/28/2023 08:54:12 EST MorethanOnePage</x:String>
+                                  <x:String>12/28/2023 08:19:42 EST OnePage</x:String>
+                                  <x:String>12/27/2023 08:56:45 EST MorethanOnePage</x:String>
+                                  <x:String>12/27/2023 08:35:34 EST OnePage</x:String>
+                                  <x:String>12/26/2023 11:41:36 EST OnePage</x:String>
+                                  <x:String>12/26/2023 11:31:01 EST MorethanOnePage</x:String>
+                                  <x:String>12/22/2023 08:05:39 EST MorethanOnePage</x:String>
+                                  <x:String>12/22/2023 07:46:19 EST OnePage</x:String>
+                                  <x:String>12/21/2023 08:57:14 EST MorethanOnePage</x:String>
+                                  <x:String>12/21/2023 08:43:49 EST OnePage</x:String>
+                                  <x:String>12/20/2023 10:03:36 EST MorethanOnePage</x:String>
+                                  <x:String>12/20/2023 09:14:21 EST OnePage</x:String>
+                                  <x:String>12/19/2023 09:15:10 EST MorethanOnePage</x:String>
+                                  <x:String>12/19/2023 08:42:15 EST OnePage</x:String>
+                                  <x:String>12/18/2023 09:21:58 EST MorethanOnePage</x:String>
+                                  <x:String>12/18/2023 08:48:21 EST OnePage</x:String>
+                                  <x:String>12/15/2023 07:56:47 EST MorethanOnePage</x:String>
+                                  <x:String>12/15/2023 07:42:09 EST OnePage</x:String>
+                                </scg:List>
+                              </uix:NSelectItem.Items>
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvTextArea="406, 221, 39, 11" CvTextArgument="Current" CvType="Text" DesignTimeRectangle="400, 216, 250, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Current'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' type='' tag='SELECT' class='' aaname='Batch*' /&gt;" Guid="9db925ef-bf62-4ec1-a05e-37a5bc48182d" InformativeScreenshot="d87cbf6c58d09d4b1163099173e0696b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CvTextArea="341, 221, 39, 12" CvTextArgument="Batch*" CvType="Text" DesignTimeRectangle="342, 219, 42, 17" ElementType="Text" FriendlyName="'Batch*'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Batch*' check:innerText='Batch*' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NSelectItem>
+                            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="586,90" sap2010:WorkflowViewState.IdRef="Delay_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Delay>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Load'" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="1125, 240, 41, 27" CvTextArea="1133, 249, 25, 11" CvTextArgument="Load" CvType="Button" DesignTimeRectangle="1127, 242, 38, 25" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Load'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='Load' tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='Load' type='' tag='A' class='button button-secondary' aaname='Load' check:innerText='Load' /&gt;" Guid="f432ed24-4689-4d11-82dd-c535bb338ff3" InformativeScreenshot="c93538e29977d992a011c7bf4671d313.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="586,90" sap2010:WorkflowViewState.IdRef="Delay_13">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Delay>
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,75" sap2010:WorkflowViewState.IdRef="Comment_17" Text="Scraping the morethan one page data and storing  it into the moreThanOnePageDT" />
+                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[onePageDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Select' ReferenceIdx='0' Name='Select'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Source' ReferenceIdx='1' Name='Source'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Output Name' ReferenceIdx='2' Name='Output Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recipient' ReferenceIdx='3' Name='Recipient'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recipient Name' ReferenceIdx='4' Name='Recipient Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Address' ReferenceIdx='5' Name='Address'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Status' ReferenceIdx='6' Name='Status'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Select' attr='fulltext' /&gt;&lt;column name='Source' attr='fulltext' /&gt;&lt;column name='Output Name' attr='fulltext' /&gt;&lt;column name='Recipient' attr='fulltext' /&gt;&lt;column name='Recipient Name' attr='fulltext' /&gt;&lt;column name='Address' attr='fulltext' /&gt;&lt;column name='Status' attr='fulltext' /&gt;&lt;column name='Column-7' attr='fulltext' /&gt;&lt;column name='Column-8' attr='fulltext' /&gt;&lt;column name='Column-9' attr='fulltext' /&gt;&lt;column name='Column-10' attr='fulltext' /&gt;&lt;column name='Column-11' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                              <uix:NExtractData.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="329, 375, 973, 91455" DesignTimeScaleFactor="1" FriendlyName="'Select Source'" FullSelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;" Guid="b48bfb1a-4061-49fd-bb48-2fac73d38743" InformativeScreenshot="02035734ecc94207cfca36f5d69982b9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                              </uix:NExtractData.Target>
+                            </uix:NExtractData>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="586,52" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[moreThanOnePageDT]" DisplayName="moreThanOnePageDT" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Select' ReferenceName='Select' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Source' ReferenceName='Source' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Output Name' ReferenceName='Output Name' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Recipient' ReferenceName='Recipient' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Recipient Name' ReferenceName='Recipient Name' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Address' ReferenceName='Address' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Status' ReferenceName='Status' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-7' ReferenceName='Column-7' ReferenceIdx='7'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-8' ReferenceName='Column-8' ReferenceIdx='8'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-9' ReferenceName='Column-9' ReferenceIdx='9'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-10' ReferenceName='Column-10' ReferenceIdx='10'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-11' ReferenceName='Column-11' ReferenceIdx='11'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Select' attr='fulltext' /&gt;&lt;column name='Source' attr='fulltext' /&gt;&lt;column name='Output Name' attr='fulltext' /&gt;&lt;column name='Recipient' attr='fulltext' /&gt;&lt;column name='Recipient Name' attr='fulltext' /&gt;&lt;column name='Address' attr='fulltext' /&gt;&lt;column name='Status' attr='fulltext' /&gt;&lt;column name='Column-7' attr='fulltext' /&gt;&lt;column name='Column-8' attr='fulltext' /&gt;&lt;column name='Column-9' attr='fulltext' /&gt;&lt;column name='Column-10' attr='fulltext' /&gt;&lt;column name='Column-11' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="329, 175, 973, 14030" DesignTimeScaleFactor="1" FriendlyName="'Select Source'" FullSelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;" Guid="cc282303-4442-47f8-9825-f21d3ec08ee8" InformativeScreenshot="aefe7bd17c77cc996e128630934419a9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,75" sap2010:WorkflowViewState.IdRef="Comment_18" Text="get the column names of the moreThanOnePage" />
+                            <Assign DisplayName="Assign - ColumnName" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_23">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="s:String[]">[columnNamesArr]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="s:String[]">[(from name in onePageDT.Columns.Cast(of system.data.dataColumn) Select name.ColumnName).ToArray()]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_24">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[columnNamesStr]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[string.Join(",",columnNamesArr)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:LogMessage DisplayName="Log Message - ColumnNames" sap:VirtualizedContainerService.HintSize="586,143" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Column Names - &quot;+columnNamesStr.ToString]" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,132" sap2010:WorkflowViewState.IdRef="Comment_19" Text="Remove extra columns from the moreThaonepageDT and keep only specified columns in the DT - &#xA;                  Select,Source,Output Name,Recipient,Recipient Name,Address,Status" />
+                            <Assign DisplayName="Assign - moreThanOnePageDT" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_25">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[onePageDT]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[onePageDT.DefaultView.ToTable(False,"Select","Source","Output Name","Recipient","Recipient Name","Address","Status")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[onePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="586,116" sap2010:WorkflowViewState.IdRef="WriteRange_16" SheetName="OnePage" WorkbookPath="[dixiom_GW]" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,94" sap2010:WorkflowViewState.IdRef="Comment_20" Text="Remove duplicates from OnePageDT Datatable and get only source and Output Name  into another DT uniqueOnePageDT" />
+                            <Assign DisplayName="Assign - uniqueMoreThanOnePageDT" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_26">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[uniqueOnePageDT]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[onePageDT.DefaultView.ToTable(true, "Source","Output Name")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[uniqueOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="586,116" sap2010:WorkflowViewState.IdRef="WriteRange_12" SheetName="uniqueOnePage" WorkbookPath="[dixiom_GW]" />
+                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="586,90" sap2010:WorkflowViewState.IdRef="Delay_14" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,151" sap2010:WorkflowViewState.IdRef="Comment_21" Text="Below linq query compares source in 'uniquemoreThanOnePageDT'  with  'Account numbers' in uniqueDixiomDT  - if the source value is not present , then source and its respective 'Output Name ' stores in another DT compareDT" />
+                            <Assign DisplayName="Assign - comparedDT" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_27">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[comparedOnePageDT]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[uniqueOnePageDT.AsEnumerable.Where(Function(r) not uniqueDixiomDT.AsEnumerable.Any(Function(r2) r2("AccountNumber").ToString=r("Source").ToString)).CopyToDataTable.DefaultView.ToTable(False,{"Source","Output Name"})]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[comparedOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="586,116" sap2010:WorkflowViewState.IdRef="WriteRange_13" SheetName="Compare_OnePage" WorkbookPath="[dixiom_GW]" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="586,75" sap2010:WorkflowViewState.IdRef="Comment_22" Text="getting list of output name  as 'Insured Cancellation Notice' only" />
+                            <Assign DisplayName="Assign - insuredCancellationRows" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_28">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataRow[]">[insuredCancellationRows]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataRow[]">[comparedOnePageDT.AsEnumerable.Where(Function(r) r(1).ToString.ToLower.Contains(outputNameValue) ).ToArray]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="586,1894" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[insuredCancellationRows]">
+                              <ui:ForEach.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentItem" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1708" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[sourceValue]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[currentItem(0).ToString]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,143" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;One page - Source Values - &quot;+currentItem(0).ToString]" />
+                                    <ui:Comment sap:VirtualizedContainerService.HintSize="510,75" sap2010:WorkflowViewState.IdRef="Comment_23" Text="get the count of rows where source values where output name matches with other rows " />
+                                    <Assign DisplayName="Assign - SourceIndex" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[countOfsourceValues]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[onePageDT.Asenumerable.Count(Function(r) r("Source").Tostring.Equals(sourceValue) AndAlso r("Output Name").toString.tolower.equals(outputNameValue))]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <If Condition="[countOfsourceValues=1]" DisplayName="If -countOfsourceValues &gt;1 " sap:VirtualizedContainerService.HintSize="510,1078" sap2010:WorkflowViewState.IdRef="If_5">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="476,665" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:Comment sap:VirtualizedContainerService.HintSize="434,75" sap2010:WorkflowViewState.IdRef="Comment_24" Text="get the source value  Index from  the 'moreThanOnePageDT'" />
+                                          <Assign DisplayName="Assign - SourceIndex" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_31">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">[sourceIndex]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">[onePageDT.Asenumerable.Tolist.Findindex(Function(r) r("Source").Tostring.Equals(sourceValue))]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;One Page - Source Index -- &quot;+sourceIndex.ToString]" />
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  -'Source'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="343, 566, 20, 20" CvType="CheckBox" DesignTimeRectangle="349, 570, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='INPUT' idx='2' /&gt;&quot;, sourceIndex)]" FuzzySelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl id='Select_1058283' type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="7bfa0a57-4c57-4e2e-ba00-244c349d1e3b" InformativeScreenshot="ade0c0e2297d897eaefe3fb1a5420435.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;One page source value - &quot;+sourceValue +&quot;has more than one matches and no.of matches are &quot;+countOfsourceValues.ToString]" />
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEach.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ForEach>
+                          </Sequence>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="648,271" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,192" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Operation_OnePage " sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NSelectItem DisplayName="Select Item 'Batch*'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="[batchOnePage]" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                    <uix:NSelectItem.Items>
+                                      <scg:List x:TypeArguments="x:String" Capacity="39">
+                                        <x:String>Current</x:String>
+                                        <x:String>01/12/2024 08:37:07 EST MorethanOnePage</x:String>
+                                        <x:String>01/12/2024 08:22:10 EST OnePage</x:String>
+                                        <x:String>01/11/2024 08:42:58 EST OnePage</x:String>
+                                        <x:String>01/11/2024 08:39:35 EST MorethanOnePage</x:String>
+                                        <x:String>01/10/2024 07:59:04 EST OnePage</x:String>
+                                        <x:String>01/10/2024 07:53:56 EST MorethanOnePage</x:String>
+                                        <x:String>01/09/2024 09:07:42 EST OnePage</x:String>
+                                        <x:String>01/09/2024 08:44:36 EST MorethanOnePage</x:String>
+                                        <x:String>01/08/2024 09:55:25 EST MorethanOnePage</x:String>
+                                        <x:String>01/08/2024 08:39:55 EST OnePage</x:String>
+                                        <x:String>01/05/2024 08:07:38 EST MorethanOnePage</x:String>
+                                        <x:String>01/05/2024 07:50:51 EST OnePage</x:String>
+                                        <x:String>01/04/2024 08:38:59 EST MorethanOnePage</x:String>
+                                        <x:String>01/04/2024 08:22:21 EST OnePage</x:String>
+                                        <x:String>01/03/2024 08:46:49 EST MorethanOnePage</x:String>
+                                        <x:String>01/03/2024 08:31:41 EST OnePage</x:String>
+                                        <x:String>01/02/2024 10:04:52 EST MorethanOnePage</x:String>
+                                        <x:String>01/02/2024 09:03:47 EST OnePage</x:String>
+                                        <x:String>12/29/2023 08:12:19 EST MorethanOnePage</x:String>
+                                        <x:String>12/29/2023 07:41:22 EST OnePage</x:String>
+                                        <x:String>12/28/2023 08:54:12 EST MorethanOnePage</x:String>
+                                        <x:String>12/28/2023 08:19:42 EST OnePage</x:String>
+                                        <x:String>12/27/2023 08:56:45 EST MorethanOnePage</x:String>
+                                        <x:String>12/27/2023 08:35:34 EST OnePage</x:String>
+                                        <x:String>12/26/2023 11:41:36 EST OnePage</x:String>
+                                        <x:String>12/26/2023 11:31:01 EST MorethanOnePage</x:String>
+                                        <x:String>12/22/2023 08:05:39 EST MorethanOnePage</x:String>
+                                        <x:String>12/22/2023 07:46:19 EST OnePage</x:String>
+                                        <x:String>12/21/2023 08:57:14 EST MorethanOnePage</x:String>
+                                        <x:String>12/21/2023 08:43:49 EST OnePage</x:String>
+                                        <x:String>12/20/2023 10:03:36 EST MorethanOnePage</x:String>
+                                        <x:String>12/20/2023 09:14:21 EST OnePage</x:String>
+                                        <x:String>12/19/2023 09:15:10 EST MorethanOnePage</x:String>
+                                        <x:String>12/19/2023 08:42:15 EST OnePage</x:String>
+                                        <x:String>12/18/2023 09:21:58 EST MorethanOnePage</x:String>
+                                        <x:String>12/18/2023 08:48:21 EST OnePage</x:String>
+                                        <x:String>12/15/2023 07:56:47 EST MorethanOnePage</x:String>
+                                        <x:String>12/15/2023 07:42:09 EST OnePage</x:String>
+                                      </scg:List>
+                                    </uix:NSelectItem.Items>
+                                    <uix:NSelectItem.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvTextArea="406, 221, 39, 11" CvTextArgument="Current" CvType="Text" DesignTimeRectangle="400, 216, 250, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Current'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' type='' tag='SELECT' class='' aaname='Batch*' /&gt;" Guid="9db925ef-bf62-4ec1-a05e-37a5bc48182d" InformativeScreenshot="d87cbf6c58d09d4b1163099173e0696b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target CvTextArea="341, 221, 39, 12" CvTextArgument="Batch*" CvType="Text" DesignTimeRectangle="342, 219, 42, 17" ElementType="Text" FriendlyName="'Batch*'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Batch*' check:innerText='Batch*' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NSelectItem.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NSelectItem>
+                                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Delay_9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Delay>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Load'" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="1125, 240, 41, 27" CvTextArea="1133, 249, 25, 11" CvTextArgument="Load" CvType="Button" DesignTimeRectangle="1127, 242, 38, 25" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Load'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='Load' tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='Load' type='' tag='A' class='button button-secondary' aaname='Load' check:innerText='Load' /&gt;" Guid="f432ed24-4689-4d11-82dd-c535bb338ff3" InformativeScreenshot="c93538e29977d992a011c7bf4671d313.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Delay_10">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Delay>
+                                  <ui:Comment sap:VirtualizedContainerService.HintSize="434,75" sap2010:WorkflowViewState.IdRef="Comment_9" Text="Scraping the morethan one page data and storing  it into the moreThanOnePageDT" />
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[moreThanOnePageDT]" DisplayName="moreThanOnePageDT" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Select' ReferenceName='Select' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Source' ReferenceName='Source' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Output Name' ReferenceName='Output Name' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Recipient' ReferenceName='Recipient' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Recipient Name' ReferenceName='Recipient Name' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Address' ReferenceName='Address' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Status' ReferenceName='Status' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-7' ReferenceName='Column-7' ReferenceIdx='7'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-8' ReferenceName='Column-8' ReferenceIdx='8'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-9' ReferenceName='Column-9' ReferenceIdx='9'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-10' ReferenceName='Column-10' ReferenceIdx='10'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-11' ReferenceName='Column-11' ReferenceIdx='11'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Select' attr='fulltext' /&gt;&lt;column name='Source' attr='fulltext' /&gt;&lt;column name='Output Name' attr='fulltext' /&gt;&lt;column name='Recipient' attr='fulltext' /&gt;&lt;column name='Recipient Name' attr='fulltext' /&gt;&lt;column name='Address' attr='fulltext' /&gt;&lt;column name='Status' attr='fulltext' /&gt;&lt;column name='Column-7' attr='fulltext' /&gt;&lt;column name='Column-8' attr='fulltext' /&gt;&lt;column name='Column-9' attr='fulltext' /&gt;&lt;column name='Column-10' attr='fulltext' /&gt;&lt;column name='Column-11' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="329, 175, 973, 14030" DesignTimeScaleFactor="1" FriendlyName="'Select Source'" FullSelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;" Guid="cc282303-4442-47f8-9825-f21d3ec08ee8" InformativeScreenshot="aefe7bd17c77cc996e128630934419a9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                  <ui:Comment sap:VirtualizedContainerService.HintSize="434,75" sap2010:WorkflowViewState.IdRef="Comment_10" Text="get the column names of the moreThanOnePage" />
+                                  <Assign DisplayName="Assign - ColumnName" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:String[]">[columnNamesArr]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:String[]">[(from name in moreThanOnePageDT.Columns.Cast(of system.data.dataColumn) Select name.ColumnName).ToArray()]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[columnNamesStr]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[string.Join(",",columnNamesArr)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:LogMessage DisplayName="Log Message - ColumnNames" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Column Names - &quot;+columnNamesStr.ToString]" />
+                                  <ui:Comment sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="Comment_11" Text="Remove extra columns from the moreThaonepageDT and keep only specified columns in the DT - &#xA;                  Select,Source,Output Name,Recipient,Recipient Name,Address,Status" />
+                                  <Assign DisplayName="Assign - moreThanOnePageDT" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="sd:DataTable">[moreThanOnePageDT]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="sd:DataTable">[moreThanOnePageDT.DefaultView.ToTable(False,"Select","Source","Output Name","Recipient","Recipient Name","Address","Status")]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:Comment sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Comment_12" Text="Remove duplicates from moreThanOnePageDT Datatable and get only source and Output Name  into another DT uniquemoreThanOnePageDT" />
+                                  <Assign DisplayName="Assign - uniqueMoreThanOnePageDT" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="sd:DataTable">[uniqueMoreThanOnePageDT]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="sd:DataTable">[moreThanOnePageDT.DefaultView.ToTable(true, "Source","Output Name")]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[uniqueMoreThanOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_10" SheetName="uniqueMoreThanOnePage" WorkbookPath="[dixiom_GW]" />
+                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_11" />
+                                  <ui:Comment sap:VirtualizedContainerService.HintSize="434,151" sap2010:WorkflowViewState.IdRef="Comment_13" Text="Below linq query compares source in 'uniquemoreThanOnePageDT'  with  'Account numbers' in uniqueDixiomDT  - if the source value is not present , then source and its respective 'Output Name ' stores in another DT compareDT" />
+                                  <Assign DisplayName="Assign - comparedDT" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="sd:DataTable">[compareMoreThanOnePageDT]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="sd:DataTable">[uniqueMoreThanOnePageDT.AsEnumerable.Where(Function(r) not uniqueDixiomDT.AsEnumerable.Any(Function(r2) r2("AccountNumber").ToString=r("Source").ToString)).CopyToDataTable.DefaultView.ToTable(False,{"Source","Output Name"})]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[compareMoreThanOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_11" SheetName="Compare" WorkbookPath="[dixiom_GW]" />
+                                  <Assign DisplayName="Assign - insuredCancellationRows" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="sd:DataRow[]">[insuredCancellationRows]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="sd:DataRow[]">[compareMoreThanOnePageDT.AsEnumerable.Where(Function(r) r(1).ToString.ToLower.Contains("insured cancellation notice") ).ToArray]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[insuredCancellationRows]">
+                                    <ui:ForEach.Body>
+                                      <ActivityAction x:TypeArguments="sd:DataRow">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentItem" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,855" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[sourceValue]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[currentItem(0).ToString]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Source Values - &quot;+currentItem(0).ToString]" />
+                                          <Assign DisplayName="Assign - SourceIndex" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">[sourceIndex]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">[moreThanOnePageDT.Asenumerable.Tolist.Findindex(Function(r) r("Source").Tostring.Equals(sourceValue))]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Source Index -- &quot;+sourceIndex.ToString]" />
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'NC10254786'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="343, 566, 20, 20" CvType="CheckBox" DesignTimeRectangle="349, 570, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='INPUT' idx='2' /&gt;&quot;, sourceIndex)]" FuzzySelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;&lt;webctrl id='Select_1058283' type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="7bfa0a57-4c57-4e2e-ba00-244c349d1e3b" InformativeScreenshot="ade0c0e2297d897eaefe3fb1a5420435.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:ForEach.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:ForEach>
+                                </Sequence>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="648,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                            <ui:CommentOut.Body>
+                              <Sequence sap:VirtualizedContainerService.HintSize="558,2706" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,2595" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Morethanonepage" DataTable="[moreThanOnePageDT]" DefaultValue="Morethanonepage" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:AddDataColumn>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[rowsInMorethanOnePage]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[moreThanOnePageDT.Rows.Count]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;No of Rows in MorethanonepageDT &quot;+moreThanOnePageDT.RowCount.ToString]" />
+                                  <ui:RemoveDataRow Row="{x:Null}" DataTable="[moreThanOnePageDT]" DisplayName="Remove last row of morethanonepageDT " sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="RemoveDataRow_6" RowIndex="[moreThanOnePageDT.Rows.count-1]" />
+                                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[moreThanOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="GW" WorkbookPath="GW.xlsx" />
+                                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[moreThanOnePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="GW_MergeDT" WorkbookPath="GW.xlsx">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:WriteRange>
+                                  <uix:NSelectItem DisplayName="Select Item 'Batch*'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="01/11/2024 08:42:58 EST OnePage" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                    <uix:NSelectItem.Items>
+                                      <scg:List x:TypeArguments="x:String" Capacity="39">
+                                        <x:String>Current</x:String>
+                                        <x:String>01/12/2024 08:37:07 EST MorethanOnePage</x:String>
+                                        <x:String>01/12/2024 08:22:10 EST OnePage</x:String>
+                                        <x:String>01/11/2024 08:42:58 EST OnePage</x:String>
+                                        <x:String>01/11/2024 08:39:35 EST MorethanOnePage</x:String>
+                                        <x:String>01/10/2024 07:59:04 EST OnePage</x:String>
+                                        <x:String>01/10/2024 07:53:56 EST MorethanOnePage</x:String>
+                                        <x:String>01/09/2024 09:07:42 EST OnePage</x:String>
+                                        <x:String>01/09/2024 08:44:36 EST MorethanOnePage</x:String>
+                                        <x:String>01/08/2024 09:55:25 EST MorethanOnePage</x:String>
+                                        <x:String>01/08/2024 08:39:55 EST OnePage</x:String>
+                                        <x:String>01/05/2024 08:07:38 EST MorethanOnePage</x:String>
+                                        <x:String>01/05/2024 07:50:51 EST OnePage</x:String>
+                                        <x:String>01/04/2024 08:38:59 EST MorethanOnePage</x:String>
+                                        <x:String>01/04/2024 08:22:21 EST OnePage</x:String>
+                                        <x:String>01/03/2024 08:46:49 EST MorethanOnePage</x:String>
+                                        <x:String>01/03/2024 08:31:41 EST OnePage</x:String>
+                                        <x:String>01/02/2024 10:04:52 EST MorethanOnePage</x:String>
+                                        <x:String>01/02/2024 09:03:47 EST OnePage</x:String>
+                                        <x:String>12/29/2023 08:12:19 EST MorethanOnePage</x:String>
+                                        <x:String>12/29/2023 07:41:22 EST OnePage</x:String>
+                                        <x:String>12/28/2023 08:54:12 EST MorethanOnePage</x:String>
+                                        <x:String>12/28/2023 08:19:42 EST OnePage</x:String>
+                                        <x:String>12/27/2023 08:56:45 EST MorethanOnePage</x:String>
+                                        <x:String>12/27/2023 08:35:34 EST OnePage</x:String>
+                                        <x:String>12/26/2023 11:41:36 EST OnePage</x:String>
+                                        <x:String>12/26/2023 11:31:01 EST MorethanOnePage</x:String>
+                                        <x:String>12/22/2023 08:05:39 EST MorethanOnePage</x:String>
+                                        <x:String>12/22/2023 07:46:19 EST OnePage</x:String>
+                                        <x:String>12/21/2023 08:57:14 EST MorethanOnePage</x:String>
+                                        <x:String>12/21/2023 08:43:49 EST OnePage</x:String>
+                                        <x:String>12/20/2023 10:03:36 EST MorethanOnePage</x:String>
+                                        <x:String>12/20/2023 09:14:21 EST OnePage</x:String>
+                                        <x:String>12/19/2023 09:15:10 EST MorethanOnePage</x:String>
+                                        <x:String>12/19/2023 08:42:15 EST OnePage</x:String>
+                                        <x:String>12/18/2023 09:21:58 EST MorethanOnePage</x:String>
+                                        <x:String>12/18/2023 08:48:21 EST OnePage</x:String>
+                                        <x:String>12/15/2023 07:56:47 EST MorethanOnePage</x:String>
+                                        <x:String>12/15/2023 07:42:09 EST OnePage</x:String>
+                                      </scg:List>
+                                    </uix:NSelectItem.Items>
+                                    <uix:NSelectItem.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvTextArea="406, 221, 39, 11" CvTextArgument="Current" CvType="Text" DesignTimeRectangle="400, 216, 250, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Current'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='BatchCd' type='' tag='SELECT' class='' aaname='Batch*' /&gt;" Guid="9db925ef-bf62-4ec1-a05e-37a5bc48182d" InformativeScreenshot="d87cbf6c58d09d4b1163099173e0696b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target CvTextArea="341, 221, 39, 12" CvTextArgument="Batch*" CvType="Text" DesignTimeRectangle="342, 219, 42, 17" ElementType="Text" FriendlyName="'Batch*'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Batch*' check:innerText='Batch*' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NSelectItem.Target>
+                                  </uix:NSelectItem>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Load'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://cure-prod.xi-1-us-west-2.guidewire.net/innovation" CvElementArea="1125, 240, 41, 27" CvTextArea="1133, 249, 25, 11" CvTextArgument="Load" CvType="Button" DesignTimeRectangle="1127, 242, 38, 25" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Load'" FullSelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='Load' tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajaxReplaceSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='Load' type='' tag='A' class='button button-secondary' aaname='Load' check:innerText='Load' /&gt;" Guid="f432ed24-4689-4d11-82dd-c535bb338ff3" InformativeScreenshot="c93538e29977d992a011c7bf4671d313.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[onePageDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Select' ReferenceIdx='0' Name='Select'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Source' ReferenceIdx='1' Name='Source'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Output Name' ReferenceIdx='2' Name='Output Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recipient' ReferenceIdx='3' Name='Recipient'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recipient Name' ReferenceIdx='4' Name='Recipient Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Address' ReferenceIdx='5' Name='Address'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Status' ReferenceIdx='6' Name='Status'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Select' attr='fulltext' /&gt;&lt;column name='Source' attr='fulltext' /&gt;&lt;column name='Output Name' attr='fulltext' /&gt;&lt;column name='Recipient' attr='fulltext' /&gt;&lt;column name='Recipient Name' attr='fulltext' /&gt;&lt;column name='Address' attr='fulltext' /&gt;&lt;column name='Status' attr='fulltext' /&gt;&lt;column name='Column-7' attr='fulltext' /&gt;&lt;column name='Column-8' attr='fulltext' /&gt;&lt;column name='Column-9' attr='fulltext' /&gt;&lt;column name='Column-10' attr='fulltext' /&gt;&lt;column name='Column-11' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="bdf10bc8-4308-48b7-a760-f930c4eb4b24" Version="V3">
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="329, 375, 973, 91455" DesignTimeScaleFactor="1" FriendlyName="'Select Source'" FullSelectorArgument="&lt;webctrl parentid='listTable' tag='TABLE' /&gt;" Guid="b48bfb1a-4061-49fd-bb48-2fac73d38743" InformativeScreenshot="02035734ecc94207cfca36f5d69982b9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="sd:DataTable">[onePageDT]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="sd:DataTable">[onePageDT.DefaultView.ToTable(False,"Select","Source","Output Name","Recipient","Recipient Name","Address","Status")]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Onepage" DataTable="[onePageDT]" DefaultValue="onepage" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:AddDataColumn>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;No of Rows in onepageDT &quot;+onePageDT.RowCount.ToString]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:LogMessage>
+                                  <ui:RemoveDataRow Row="{x:Null}" DataTable="[onePageDT]" DisplayName="Remove last row of onepageDT " sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="RemoveDataRow_5" RowIndex="[onePageDT.Rows.count-1]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:RemoveDataRow>
+                                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[onePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="GW_onePage" WorkbookPath="GW.xlsx">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:WriteRange>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MergeDataTable Destination="[moreThanOnePageDT]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[onePageDT]" />
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                  <ui:WriteRange AddHeaders="False" DataTable="[onePageDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="GW_MergeDT" StartingCell="[&quot;A&quot;+(rowsInMorethanOnePage+2).ToString]" WorkbookPath="GW.xlsx">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:WriteRange>
+                                </Sequence>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:Break sap:VirtualizedContainerService.HintSize="648,25" sap2010:WorkflowViewState.IdRef="Break_2" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbxSURBVFhHpZZtTFvnFcf9pWuypg3tmjVrGmLeEoMBG2PaJBDb2CkvyQJpvlXtFqRpmrSXT5s67a3pl0nTptXkhdAklEsCbZdG3VsrVe3AhhBCs3ZDi5ZAo21OA5hAOztNmrXhXj9n//M8j415SUe7I/30P+fh+vzPufcasC03YgF3zkzQ0zITrDLAyPshb3ImVEXTQS/NBDn3RmeClcZ0qHIvX6s/9v/HVIPbfjVU1com2kxcra2k6VovqBQM14sIVBpTAbddt/nsoTb2htlUGgWUWcYQ9dWAR0wFOPcgV8r1VMCj8AOfZ59uufzgyWES00a6sUfm8ww0cTZiuPZViLi/Qp1xrohNbV7m3ZiurXChUSzbIIO/QjDKUBlpE4r73BmdhE5ucys4V/X/HoI3h1EsvYFSjTaa9Kmm8W3aSDXPMJGmxkWTNS4BBaoer3ZhCMfSQ/Azh1FMGWU1z5ipxnIA1hq3kDUbaENlJHMxLmul49XljFDqii35LZnwucMZE4XI3khvo41Uzg1lzc1l7aIrOGO0KV3ZupAycWVLWVjbqnC/tNve/h3/nAmboqk2I7mNNpn57jfoxss9ZMYnKR3i5rskZl4la2QXWecqGcGaYn3LQ5JzHpx5BM5kTcNZ70PlS3uMbUYzjYUq1Fb6dknFxDKvr6YbJ3u0JVE8Kah/bBaYdGkqpU8xzNSLZL3jJ/OtChgxbgzhxjDQYbeqoajVXXAbu3M8LzxGzL4fBjO3io1Z39tSRuN1W+nWpTFp8JeYSd8yPqKqZ65R1T4N8qbwdYqOzsprxM0xst6ugZmLDZUOc85aDi3HEOVJGsG74H5hd4u7ZzdVANb+Jq80ZfCsBOv133TLxkein5AXhhmezso1R3ENh4h3K7PhMk1pljJOMXumpMXm7m42ALm6m4S7p1k8+Ys6ury5lN7b7BTMxGP1siFvV/l0UuLROse1eefv4C5xpC7sFdZZJ5lnS8hagtRwiWFzdTdHXScwwIkmTTO9useLIZwUe8RJN177nWy289kPqeJnyTlglNF0rutvdt6QnxFTJ4R5thhm2TgwlINS0NRQ8Yit/HhTsvz4LkpT1rWLth9spL/7yij2cIm4dWmUxuIWudF8MYnbkKTJJF7MTyZguBGGmiEJMSZInS1K2MqMr8JUImSu659/u5piVcWCN4lcnCXXTxNLA7P5dYLKoRH9QlpDRWSeKSSLQW4NaZV1gbCVdu6kUpiWGjuF1C6lj7Q30vkap2zSd/EWlaHpQtgoW7PP+zA0h3WmAEb5wjoDhgowTD7O5uABks7OHUKxk6BAqvjeUz5hxidoMpGi0p/8+zMxiscmProAkzwyB/Ogdgxhl7XKN3CdsJU8v+OvJR2NpNhBqGXuZH2+UQz2n5SbtHRcJycaO38MWD+Ful9dk59JTZ+CGRvlCnMwlyzJBrBecG4Oro/aHB0NRvGxRpqjQQ7gONYgOP/6a0/JZn/+1yyVwLwYKP1A5nP13HkvHhmH9fYWMk+vBw/B9CHBqnOyWE+vM2yOow0tIGPIyPpovQCsdPy8+ioe6rtJjh99QA6YSF0Izg/1/kdee228E4brYLYO2z6I/EGYK6y0Dqzba7MbgZziI/XJTUfqKRsH69E6wXi79ojR9/8hG//pwi0K/jJJm2CYzdeOfUjn/qlevInEu5QYLCFz4CuatTBdK9JqnX5A5hTNUX+WNz1X37rpuTraqJH5kTqRroHwGntE1/nfSgOOi5OWHIaZwEuaDr6m849bsN1aGD+QwWLt/7JUa2CNsPrXGNKcw9HeYN/Y/igxRVrTeRaisH27CPQ8Sa+MvkEX9R3hGL9+lYy/vUJP/P4H5O/wwWiNYkBr//0ytwbuFzIH2H7+f0ZFbaHWosPbKU1hG+ujxKaFhyWkNCT4ZxldwKk/FMHkS8pU6n3YVipZyFlTA/ct/k/ZHg7kFBwOxQraVOOCQyEqBKx8JpXP2ubX2Tze9TDM7hVm9F4YAlaAM605wormxLTl4sAQ9oK2YCzdMP9gkApA/qGgkHCu66XOL7+JZxxdjQHuAathuBqGUNSa2KJbvzB4iPwDtTHZ9EAt5R2sFQznafJY8XNWmR8I0ve7y8mM3I1N71EKrOgqmK4SnM9G7ob5ik83TwcPkbe/NgbIfiAg8vYHpMochvb9Kk9T076VLr+B5xxZxabQu+ZhRe6Kfbxc8+zAIM/YW2F+W/wYxi86Xs4ns28ljL4oMSMrBNdmBPStDGe+758n+G7khv3GhrCfNrT6Re6zPsF5btgn6+q2zTBZobmTzF4QuTNp9q5s/fj1z7H17QKD5Kz/9bYWDNCFAaLQJKCTp/A7PXJHItX7hZFU7wpjtu+OluVvbLP9F5lmWAkTeM7rAAAAAElFTkSuQmCC" InformativeScreenshot="77c8eee4fb37caedb0aca9d2c3e4b335.jpg" Selector="&lt;html app='chrome.exe' title='Guidewire InsuranceNow™ Login' /&gt;" Title="Guidewire InsuranceNow™ Login" Url="[URL]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

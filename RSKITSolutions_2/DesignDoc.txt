@@ -1,0 +1,43 @@
+For every source/account number which has Output Name as "Insured Cancellation Notice" ... we will then lookup in the 
+Doxiom excel sheet and try to find the same.
+
+if we do not find it ... we have to then go back to GW portal and send this job for Batch Priting
+
+Then download that zip based on naming convention
+Extract the file create from the zip file
+Keep it in temp folder
+and then once we have exchauseted all the source/account number from the GW download we 
+Zip all the files in temp folder
+Load them in the gdrive location
+
+-----------------------------------------------------------------------------------------------------------------
+
+Get Doxiom Excel file from Gmail
+
+Read Excel file and store it in "DoxiomDT"
+
+Remove duplidates from "DoxiomDT" and name it as "uniqueDoxiomDT"
+
+GoTo Cure-Prod website -- Get the respective date moreThanOnePage Data
+
+Scrape the entire data  and store it in moreThanOnePageDT
+Remove duplidates from "moreThanOnePageDT" and name it as "uniquemoreThanOnePageDT"
+
+now compare "uniqueDoxiomDT" column name "AccountNumber" with  "uniquemoreThanOnePageDT" column name "Source"
+now get the Source column values whichever not present in "uniqueDoxiomDT" column name "AccountNumber"
+
+now take the Source column value and get the index from moreThanOnePageDT
+
+with this index find the row in GoTo Cure-Prod website and select it and click on load
+
+delay --15 secs
+Continue
+
+
+
+
+Get the zip file for the date we are processing
+copy that zip file to local
+extract zip file and get the latest file based on modified date
+
+

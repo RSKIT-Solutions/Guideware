@@ -1,0 +1,6 @@
+Hi Team,<br>
+Bot didn't  find the mail or Doxim file attachment  for the date -DoximFileDate,<br>
+can you please send the mail and rerun the bot.
+
+Regards,
+Automation Bot
